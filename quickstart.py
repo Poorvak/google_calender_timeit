@@ -19,6 +19,16 @@ CLIENT_SECRET_FILE = 'client_secret.json'
 APPLICATION_NAME = 'calender_timer'
 
 def get_credentials():
+  '''
+  get_credentials is used for getting credentials of the user
+
+  :home_dir:
+  :credential_dir:
+  :store:
+  :flow:
+  :flags:
+  :credentials:
+  '''
   home_dir = os.path.expanduser('~')
   credential_dir = os.path.join(home_dir, '.credentials')
   if not os.path.exists(credential_dir):
@@ -37,6 +47,17 @@ def get_credentials():
   return credentials
 
 def main():
+  '''
+  main function for calender syncing and extracting 10 events
+
+  :credentials:
+  :http:
+  :service:
+  :now:
+  :eventsResult:
+  :events:
+  :start:
+  '''
   credentials = get_credentials()
   http = credentials.authorize(httplib2.Http())
   service = discovery.build('calendar', 'v3', http=http)
