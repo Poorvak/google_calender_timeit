@@ -1,6 +1,6 @@
 urllib3==1.11
 oauth2client==1.5.2
-httplib2==0.9.2
+httplib2==0.18.0
 google-api-python-client==1.4.2
 discovery==0.0.4
 ConfigArgParse==0.9.3
